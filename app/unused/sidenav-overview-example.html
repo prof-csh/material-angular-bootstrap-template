@@ -1,0 +1,84 @@
+<div 
+  class="grid-container"
+  gdAreas="pt pt | st st | nav content" 
+  gdAreas.lt-sm="pt pt | st st | content content"
+  gdRows="auto auto auto"
+  gdColumns="250px auto"
+  >
+  
+  <mat-toolbar 
+    gdArea="pt"
+    color="primary" 
+    class="main-mat-toolbar mat-elevation-z6">
+    Main toolbar Lorem Ipsum
+  </mat-toolbar>
+  
+  <!-- <mat-sidenav-container      
+    gdArea="st"
+    *ngIf="shouldRun"    
+    >
+    <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+                  [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+                  [mode]="(isHandset$ | async) ? 'over' : 'side'"
+                  [opened]="!(isHandset$ | async)"
+                  [fixedInViewport]="!(isHandset$ | async)"
+                  [fixedTopGap]="64"
+                  [fixedBottomGap]="0"
+                  >
+      <div class="sidenav-container">
+        <div class="sidenav-box">
+          <div class="scrollbar" fxHide fxShow.gt-xs>
+                    
+              <app-navbar-contents></app-navbar-contents>
+                        
+          </div>
+        </div>
+      </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <mat-toolbar color="primary">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span>Secondary toolbar</span>&nbsp;
+        <span fxHide fxShow.xs>FX: XS</span>
+        <span fxHide fxShow.sm>FX: SM</span>
+        <span fxHide fxShow.md>FX: MD</span>
+        <span fxHide fxShow.lg>FX: LG</span>
+        <span fxHide fxShow.xl>FX: XL</span>
+      </mat-toolbar>
+    
+      <div class="content">
+        
+        <div fxHide fxShow.lt-sm>LT-sm</div>
+        <div fxHide fxShow.gt-xs>GT-xs</div>
+
+        <app-contents></app-contents>        
+      </div>
+
+    </mat-sidenav-content>
+  </mat-sidenav-container> -->
+
+  <div gdArea="nav" class="sidenav-container" fxShow fxHide.xs>
+    NAV
+  </div>
+  <div gdArea="content" class="content-x">
+    <div >
+      <div class="content">
+          
+          <div fxHide fxShow.lt-sm>LT-sm</div>
+          <div fxHide fxShow.gt-xs>GT-xs</div>
+
+          <app-contents></app-contents>        
+        </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!shouldRun">Please open on Stackblitz to see result</div>
